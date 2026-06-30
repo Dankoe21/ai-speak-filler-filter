@@ -1,24 +1,35 @@
-# AI-Speak Banned Filler Words
+# Eval: ai-speak-filler-filter
 
-Avoid all of the following. Write conversationally instead.
+Grade in a fresh subagent. Pass = all boxes checked. Any fail = loop back to edit.
 
-## 1. Cliché openers and hooks
-Delve into · In today's fast-paced world · In the digital era · Let's dive in · Aims to explore · Take a deep dive · It's important to note · In the realm of · Navigating the landscape · Ever-evolving landscape · Embark on a journey · At the forefront of
+## Mode detection
+- [ ] Correctly identified creation vs. editing mode
+- [ ] Asked one clarifying question when mode was ambiguous (no more, no less)
 
-## 2. Over-the-top action verbs
-Leverage · Utilize · Enhance · Facilitate · Streamline · Revolutionize · Transform · Foster · Propel · Underscore · Ignite · Empower · Amplify · Harness · Unveil
+## Em dashes
+- [ ] No em dashes remain in the output
+- [ ] Replacements read naturally (not choppy or over-punctuated)
+- [ ] No comma-bracketed asides or parentheticals were introduced as a disguised stand-in for the dash
 
-## 3. Transition word overload
-Moreover · Furthermore · Additionally · Consequently · Subsequently · Notably · Importantly · Alternatively · Similarly · Nonetheless · Therefore · Indeed · Thus · On the other hand · As previously mentioned
+## "X, not Y" pairings
+- [ ] No rhetorical "X, not Y" contrasts remain
+- [ ] Primary point is preserved after the negative was dropped
 
-## 4. Soft qualifiers and disclaimers
-It's worth mentioning · Generally speaking · In many cases · To some extent · To put it simply · Tends to · Arguably · It is clear that · Clearly · Undeniably · Without a doubt · For the most part · Typically · As a general rule · It goes without saying
+## Banned filler words
+- [ ] No words from the banned list appear in the output
+- [ ] Replacements use plain, direct language (not a different filler word)
+- [ ] Sentences that said nothing without the filler were cut entirely
 
-## 5. Polished-but-empty adjectives
-Robust · Seamless · Comprehensive · Cutting-edge · Innovative · Game-changing · Groundbreaking · Future-ready · Vibrant · Essential · Crucial · Vital · Pivotal · Keen · Profound · Unparalleled · Unwavering · Dynamic
+## Voice preservation
+- [ ] Author's sentence rhythm and structure are intact
+- [ ] No content was added that wasn't in the original
+- [ ] Exempt content (code, quoted strings, context-appropriate terms) was left alone
 
-## 6. Metaphorical fluff
-Tapestry · Testament · Symphony · Labyrinth · Maze · Catalyst · Beacon · Cornerstone · Epitome · Paradigm · Nuance · Essence · Plethora · Myriad · Metamorphosis
+## Changelog (editing mode only)
+- [ ] Changelog is present and factual
+- [ ] Three lines or fewer
+- [ ] No quality commentary or suggestions — only what changed
 
-## 7. Summary and conclusion signposts
-In conclusion · In summary · Ultimately · Overall · To summarize · That being said · All in all · In short · Bottom line · Moving forward
+## Creation mode (if applicable)
+- [ ] No filler violations appear in the generated text
+- [ ] No post-pass or self-correction footnote was added

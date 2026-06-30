@@ -30,10 +30,15 @@ If the mode is ambiguous, ask one question: "Is this existing text, or should I 
 
 ### 1. Em dashes
 Replace em dashes used for dramatic pauses or tacked-on asides with a period, comma, or
-conjunction. The content itself should carry the emphasis.
+conjunction. The content itself should carry the emphasis. Rewrite the sentence rather than
+patching it: don't swap the dash for a parenthetical, and don't wrap the same aside in a pair
+of commas instead. A comma-bracketed aside (`X, the thing in question, did Y`) is the same
+interruption with different punctuation, not a fix.
 
 Before: `Our tool automates entry—allowing teams to focus on growth—while reducing errors.`
 After: `Our tool automates entry, freeing teams to focus on growth and reducing errors.`
+
+Before (disguised, not fixed): `Our tool automates entry, the part that used to eat your morning, while reducing errors.`
 
 ### 2. "X, not Y" pairings
 State the primary point directly. Drop the negative contrast — it adds length without adding meaning.
