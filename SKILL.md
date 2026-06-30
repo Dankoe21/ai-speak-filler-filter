@@ -12,6 +12,8 @@ description: Removes AI-speak, filler words, and rhetorical tics from any substa
 Remove AI-speak and filler from any substantial text. Two modes depending on whether you're
 creating or editing.
 
+Check `memory.md` for open lessons from past runs before starting.
+
 ---
 
 ## Mode detection
@@ -83,3 +85,22 @@ No commentary on quality or suggestions for further improvement — just what ch
   chemistry doc, "paradigm" in a philosophy paper).
 - Code, inline variable names, and quoted strings are exempt.
 - If the text is very short (one or two sentences), apply rules silently with no changelog.
+
+---
+
+## Self-check and self-improvement
+
+Before delivering, grade the output against `eval.md`. Fix anything that fails.
+
+If this run surfaced a recurring mistake worth guarding against next time (not a one-off),
+append a dated 2-3 sentence entry to `memory.md`. If that happened, the skill's own
+instructions changed, so use `ask_user_input_v0` to ask: "This run updated my notes
+(memory.md). Package an updated .skill file?" with options "Yes, package it" / "Skip for
+now". If yes, run:
+
+```bash
+cd /mnt/skills/user && zip -r /mnt/user-data/outputs/ai-speak-filler-filter.skill ai-speak-filler-filter/
+```
+
+Then call `present_files` to deliver the `.skill` file. Skip the prompt entirely if
+`memory.md` wasn't touched this run.
